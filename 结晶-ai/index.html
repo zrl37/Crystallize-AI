@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结晶 AI - 思有所成</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              animation: {
+                'bounce-short': 'bounce 1s infinite',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+      @media print {
+        /* 隐藏所有非打印元素 */
+        body * { visibility: hidden; }
+        /* 只显示被标记为可打印的部分 */
+        .printable-note, .printable-note * { visibility: visible; }
+        .printable-note { 
+          position: absolute; 
+          left: 0; 
+          top: 0; 
+          width: 100%; 
+          padding: 20px;
+          color: black !important;
+        }
+        /* 强制去除背景颜色和阴影 */
+        .printable-note textarea, .printable-note div { 
+          background: transparent !important; 
+          border: none !important; 
+          box-shadow: none !important; 
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
